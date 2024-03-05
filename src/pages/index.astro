@@ -20,6 +20,24 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
 <Layout>
+    <style>
+    .fileinput-button {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        left:60px;
+      padding: 10px 30px; background-color: #2196f3; color: #fff; border-radius: 4px; cursor: pointer; box-shadow: 0px 1px 3px #999;
+    }
+    .fileinput-button input {
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        -ms-filter: 'alpha(opacity=0)';
+        font-size: 200px;
+        cursor: pointer;
+    }
+    </style>
   <Header />
   <main id="main-content">
     <section id="hero">
@@ -37,6 +55,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <div class="image">
               <img src="https://replicate.delivery/pbxt/zgOzfTqRFx1lXi5IpnHVNX6l8bfmK2IwKE14GNxnQ2OaznZSA/out.png" alt="输出图像", style="width:300px; height:300px">
         </div>
+
+        <!-- 上传按钮 -->
+        <form>
+            <span class="btn btn-success fileinput-button">
+                <span class="glyphicon glyphicon-plus"></span>
+                <span>选择上传文件</span>
+                <input type="file">
+            </span>
+        </form>
+       </form>
+
+
       </div>
     </section>
 
